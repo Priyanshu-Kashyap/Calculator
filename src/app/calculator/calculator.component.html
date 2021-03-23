@@ -1,0 +1,96 @@
+<div class="calculator">
+  <div class="output">
+    <div class="dec-bin">
+      <button (click)="toggleCalc()" class="d-btn">
+        <span class="material-icons">autorenew</span>
+      </button>
+      <small>{{decBin}}</small>
+    </div>
+    <div id="prevOperand">{{previous}}</div>
+    <div id="currOperand">{{current}}</div>
+  </div>
+  <button (click)="allClear()" class="span" id="all-clear">AC</button>
+  <button (click)="delete()" id="delete">DEL</button>
+  <button (click)="getOperation($event.target.innerText)" class="operations">
+    ÷
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    7
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    8
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    9
+  </button>
+  <button (click)="getOperation($event.target.innerText)" class="operations">
+    x
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    4
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    5
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    6
+  </button>
+  <button (click)="getOperation($event.target.innerText)" class="operations">
+    +
+  </button>
+  <button (click)="getNumber($event.target.innerText)" class="numbers">
+    1
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    2
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    3
+  </button>
+  <button (click)="getOperation($event.target.innerText)" class="operations">
+    -
+  </button>
+  <button
+    (click)="getNumber($event.target.innerText)"
+    [disabled]="isBinary"
+    class="numbers"
+  >
+    .
+  </button>
+  <button (click)="getNumber($event.target.innerText)" class="numbers">
+    0
+  </button>
+  <button (click)="compute()" class="span" id="equal">=</button>
+</div>

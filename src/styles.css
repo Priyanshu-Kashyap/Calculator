@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+
+body {
+  background: linear-gradient(to top, rgba(12, 38, 70, 0.9), rgb(0, 255, 255));
+}

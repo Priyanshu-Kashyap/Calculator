@@ -1,0 +1,98 @@
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  grid-template-rows: minmax(110px, auto) repeat(5, 75px);
+  grid-template-columns: repeat(4, 75px);
+}
+
+.span {
+  grid-column: span 2;
+}
+
+.output {
+  position: relative;
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+#prevOperand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+}
+
+#currOperand {
+  color: white;
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+button:hover {
+  background-color: white;
+}
+
+button:active {
+  font-size: 0.9rem;
+}
+
+.operation:active {
+  font-size: 1.1rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.dec-bin {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 10px;
+  left: 10px;
+}
+
+.dec-bin small {
+  transform: rotate(270deg) translateX(-5px);
+  color: white;
+  user-select: none;
+}
+
+.d-btn {
+  background: none;
+  font-size: 0.5rem;
+  border: none;
+  color: white;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.d-btn::after {
+  position: absolute;
+  top: 20px;
+}
+
+.d-btn:hover {
+  background: none;
+}
+
+.d-btn:active {
+  transform: rotate(180deg);
+}
